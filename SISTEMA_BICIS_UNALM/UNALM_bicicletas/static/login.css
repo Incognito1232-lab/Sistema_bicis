@@ -1,0 +1,112 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #4CAF50, #8BC34A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #4CAF50;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Etiquetas */
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botón */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background-color: #45A049;
+    transform: scale(1.02);
+}
+
+/* Texto responsivo */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+    }
+    .login-container h2 {
+        font-size: 1.8rem;
+    }
+    .login-container label {
+        font-size: 1rem;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        font-size: 1rem;
+    }
+    .login-container button {
+        font-size: 1rem;
+    }
+}

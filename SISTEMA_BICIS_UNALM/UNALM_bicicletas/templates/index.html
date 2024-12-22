@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../static/index.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- Primer div - Registrar Ingreso -->
+        <div class="box">
+            <div class="header">
+                <h2>Registrar Ingreso</h2>
+            </div>
+            <div class="content">
+                <!-- Formulario de Registrar Ingreso -->
+                <form action="../php/registrar_ingreso.php" method="POST">
+                    <div class="form-group">
+                        <label for="codigo_bicicleta">Código de la bicicleta:</label>
+                        <input type="number" id="codigo_bicicleta" name="codigo_bicicleta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni_ingreso">DNI del que ingresa la bicicleta:</label>
+                        <input type="number" id="dni_ingreso" name="dni_ingreso" required>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Segundo div - Registrar Salida -->
+        <div class="box">
+            <div class="header">
+                <h2>Registrar Salida</h2>
+            </div>
+            <div class="content">
+                <!-- Formulario de Registrar Salida -->
+                <form action="../php/registrar_salida.php" method="POST">
+                    <div class="form-group">
+                        <label for="codigo_bicicleta_salida">Código de la bicicleta:</label>
+                        <input type="number" id="codigo_bicicleta_salida" name="codigo_bicicleta_salida" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni_salida">DNI del que sale con la bicicleta:</label>
+                        <input type="number" id="dni_salida" name="dni_salida" required>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tercer div - Buscar Bicicleta -->
+        <div class="box">
+            <div class="header">
+                <h2>Buscar Bicicleta</h2>
+            </div>
+            <div class="content">
+                <!-- Formulario de Buscar Bicicleta -->
+                <form action="../php/estado.php" method="GET">
+                    <div class="form-group">
+                        <label for="codigo_bicicleta_buscar">Código de la bicicleta:</label>
+                        <input type="number" id="codigo_bicicleta_buscar" name="codigo_bicicleta_buscar" required>
+                    </div>
+                    <button type="submit">Buscar</button>
+                </form>
+                
+                <!-- Tabla donde se mostrará el estado de la bicicleta -->
+                <div id="resultado_bicicleta">
+                    <!-- Aquí se cargará la tabla con los resultados de la búsqueda -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
